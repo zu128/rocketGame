@@ -123,6 +123,16 @@ NavMeshSettings:
     debug:
       m_Flags: 0
   m_NavMeshData: {fileID: 0}
+--- !u!198 &208437505 stripped
+ParticleSystem:
+  m_CorrespondingSourceObject: {fileID: 5791951526045851898, guid: 0d9401817dd05ad40ac68e5b496074a0, type: 3}
+  m_PrefabInstance: {fileID: 4455164525842109290}
+  m_PrefabAsset: {fileID: 0}
+--- !u!198 &640825132 stripped
+ParticleSystem:
+  m_CorrespondingSourceObject: {fileID: 2649410229608361981, guid: 0d9401817dd05ad40ac68e5b496074a0, type: 3}
+  m_PrefabInstance: {fileID: 4455164525842109290}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &705507993
 GameObject:
   m_ObjectHideFlags: 0
@@ -215,8 +225,13 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 2
+  m_RootOrder: 6
   m_LocalEulerAnglesHint: {x: 50, y: -30, z: 0}
+--- !u!198 &814146207 stripped
+ParticleSystem:
+  m_CorrespondingSourceObject: {fileID: 1209284919195343785, guid: 0d9401817dd05ad40ac68e5b496074a0, type: 3}
+  m_PrefabInstance: {fileID: 4455164525842109290}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &940546506 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 8816530140893926350, guid: 0d9401817dd05ad40ac68e5b496074a0, type: 3}
@@ -236,6 +251,10 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   mainThrust: 1000
   rotationThrust: 100
+  mainEngine: {fileID: 8300000, guid: 29bde6326b4c34ad8a12da475f79b50a, type: 3}
+  mainEngineParticles: {fileID: 1862919453}
+  leftThrusterParticles: {fileID: 208437505}
+  rightThrusterParticles: {fileID: 2050627123}
 --- !u!54 &940546512
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -360,6 +379,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: adef580893ed012428298b3753687f7e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  levelLoadDelay: 1
+  success: {fileID: 8300000, guid: 7bd6b897eb5ca4b7d88a205c4a51640c, type: 3}
+  crash: {fileID: 8300000, guid: 7e9ee6dc04a5d40d1a5dfc4beb9865e7, type: 3}
+  successParticles: {fileID: 640825132}
+  crashParticles: {fileID: 814146207}
 --- !u!1 &963194225
 GameObject:
   m_ObjectHideFlags: 0
@@ -436,14 +460,14 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 963194225}
-  m_LocalRotation: {x: 0.24567409, y: -0, z: -0, w: 0.96935254}
-  m_LocalPosition: {x: 0, y: 9.44, z: -13.35}
+  m_LocalRotation: {x: 0.0012701107, y: -0, z: -0, w: 0.9999992}
+  m_LocalPosition: {x: 0, y: 5.74, z: -14.01}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 0
-  m_LocalEulerAnglesHint: {x: 28.443, y: 0, z: 0}
+  m_LocalEulerAnglesHint: {x: 0.146, y: 0, z: 0}
 --- !u!1001 &1256943520
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -505,6 +529,16 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 462adb9a13ed235488b970a86b610ce8, type: 3}
+--- !u!198 &1862919453 stripped
+ParticleSystem:
+  m_CorrespondingSourceObject: {fileID: 2466651908222172306, guid: 0d9401817dd05ad40ac68e5b496074a0, type: 3}
+  m_PrefabInstance: {fileID: 4455164525842109290}
+  m_PrefabAsset: {fileID: 0}
+--- !u!198 &2050627123 stripped
+ParticleSystem:
+  m_CorrespondingSourceObject: {fileID: 5928485403518311135, guid: 0d9401817dd05ad40ac68e5b496074a0, type: 3}
+  m_PrefabInstance: {fileID: 4455164525842109290}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &4455164525842109290
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -512,6 +546,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 5970958094808908878, guid: 0d9401817dd05ad40ac68e5b496074a0, type: 3}
+      propertyPath: m_Name
+      value: Left Thruster Particles
+      objectReference: {fileID: 0}
     - target: {fileID: 6886103634638831725, guid: 0d9401817dd05ad40ac68e5b496074a0, type: 3}
       propertyPath: m_RootOrder
       value: 5
